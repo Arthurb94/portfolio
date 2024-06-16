@@ -30,7 +30,7 @@ export default function Navbar({ isDarkMode, toggleTheme, changeLanguage }) {
                         {t('navbar.testimonials')}
                     </a>
                     <a href="#contact" className={`mr-5 hover:text-white ${isDarkMode ? 'text-gray-400' : 'text-gray-900'}`}>
-                        {t('navbar.hireMe')}
+                        {t('navbar.contact')}
                     </a>
                 </nav>
                 <button
