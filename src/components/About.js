@@ -1,6 +1,5 @@
 // src/components/About.js
 
-import developer from "../assets/developer.png";
 import developer_dark from "../assets/developer-dark.png";
 import { useTranslation } from "react-i18next";
 

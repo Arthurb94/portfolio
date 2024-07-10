@@ -7,6 +7,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import ProjectDetail from "./components/ProjectDetail";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./i18n";
 
 function App() {
@@ -22,17 +24,35 @@ function App() {
   };
 
   return (
-    <div className={isDarkMode ? "dark" : ""}>
-      <Navbar
-        isDarkMode={isDarkMode}
-        toggleTheme={toggleTheme}
-        changeLanguage={changeLanguage}
-      />
-      <About isDarkMode={isDarkMode} />
-      <Projects isDarkMode={isDarkMode} />
-      <Skills isDarkMode={isDarkMode} />
-      <Contact isDarkMode={isDarkMode} changeLanguage={changeLanguage} />
-    </div>
+    <Router>
+      <div className={isDarkMode ? "dark" : ""}>
+        <Navbar
+          isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+          changeLanguage={changeLanguage}
+        />
+        <Routes>
+          <Route
+            path="/portfolio"
+            element={
+              <>
+                <About isDarkMode={isDarkMode} />
+                <Projects isDarkMode={isDarkMode} />
+                <Skills isDarkMode={isDarkMode} />
+                <Contact
+                  isDarkMode={isDarkMode}
+                  changeLanguage={changeLanguage}
+                />
+              </>
+            }
+          />
+          <Route
+            path="/projects/:projectId"
+            element={<ProjectDetail isDarkMode={isDarkMode} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
