@@ -2,37 +2,51 @@
 
 export const projects = [
   {
-    title: "React Reserve",
-    subtitle: "MERN Stack",
+    title: "Interface cerveau-machine",
+    subtitle: "Matlab et Python",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Projet de fin d'études visant à développer un système de commande d'une prothèse de main à l'aide des signaux EEC émis par le cerveau.",
     image: "./logo192.png",
     link: "https://reactbootcamp.com",
   },
   {
-    title: "React Tracks",
-    subtitle: "React and Python",
+    title: "Reddit scrapping",
+    subtitle: "Python",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./logo192.png",
-    link: "https://reedbarger.com",
-  },
-  {
-    title: "DevChat",
-    subtitle: "React and Firebase",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./logo192.png",
+      "Projet de scrapping de Reddit ayant pour but de mettre en relation les fluctuations de la bourse et l'activité sur les canaux boursiers de Reddit.",
+    image: "./reddit_logo.png",
     link: "https://jsbootcamp.com",
   },
   {
-    title: "Epic Todo App",
-    subtitle: "React Hooks",
+    title: "Dashboard",
+    subtitle: "R et Python",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Création de deux dashboards en R et en Python ayant pour but d'analyser des données réelles.",
+    image: "./dashboard.png",
+    link: "https://reedbarger.com",
+  },
+  {
+    title: "Reconnaissance des mouvements de la main",
+    subtitle: "Python",
+    description:
+      "Projet de reconnaissance et interprétation des mouvements de la main en live grâce à notre modèle.",
+    image: "./hand_gesture.png",
+    link: "https://reactbootcamp.com",
+  },
+  {
+    title: "Générateur de QR code",
+    subtitle: "Matlab",
+    description:
+      "Développement d'un algorithme permettant de généré un QR code à partir d'un phrase grâce au code de Reed-Solomon.",
     image: "./logo192.png",
     link: "https://pythonbootcamp.com",
   },
+  {
+    title: "Jeu",
+    subtitle: "Java",
+    description:
+      "Projet libre de création de jeu d'exploration basé sur le projet Zuul-Bad.",
+    image: "./logo192.png",
+    link: "https://jsbootcamp.com",
+  },
 ];
-
-export const skills = ["Python", "Intelligence artificielle", "C", "binks"];

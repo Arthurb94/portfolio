@@ -73,8 +73,16 @@ const resources = {
       },
       skills: {
         title: "Compétences",
-        description: "",
-        list: ["Python", "Intelligence artificielle", "C", "binks"],
+        list: [
+          "Python",
+          "Javascript",
+          "HTML / CSS",
+          "AWS",
+          "Docker",
+          "Git / Github",
+          "Matlab",
+          "Intelligence artificielle",
+        ],
       },
       projects: {
         title: "Projets réalisés",

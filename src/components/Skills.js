@@ -2,7 +2,6 @@
 
 import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
 import React from "react";
-import { skills } from "../data";
 import { useTranslation } from "react-i18next";
 
 export default function Skills({ isDarkMode }) {
@@ -28,13 +27,10 @@ export default function Skills({ isDarkMode }) {
           >
             {t("skills.title")}
           </h1>
-          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            {t("skills.description")}
-          </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
           {skillsList.map((skill) => (
-            <div key={skill} className="p-2 sm:w-1/2 w-full">
+            <div key={skill} className="p-2 sm:w-1/4 w-full">
               <div
                 className={`${
                   isDarkMode ? "bg-gray-800" : "bg-gray-200"

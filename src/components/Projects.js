@@ -6,7 +6,7 @@ import { projects } from "../data";
 import { useTranslation } from "react-i18next";
 
 export default function Projects({ isDarkMode }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <section
       id="projects"
@@ -33,9 +33,9 @@ export default function Projects({ isDarkMode }) {
             <a
               href={project.link}
               key={project.image}
-              className="sm:w-1/2 w-100 p-4"
+              className="sm:w-1/3 w-100 p-4"
             >
-              <div className="flex relative">
+              <div className="rounded flex relative">
                 <img
                   alt="gallery"
                   className="absolute inset-0 w-full h-full object-cover object-center"
