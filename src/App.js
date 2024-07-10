@@ -1,17 +1,17 @@
 // src/App.js
 
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import './i18n';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+import "./i18n";
 
 function App() {
   const { i18n } = useTranslation();
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -22,13 +22,16 @@ function App() {
   };
 
   return (
-    <div className={isDarkMode ? 'dark' : ''}>
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} changeLanguage={changeLanguage}/>
+    <div className={isDarkMode ? "dark" : ""}>
+      <Navbar
+        isDarkMode={isDarkMode}
+        toggleTheme={toggleTheme}
+        changeLanguage={changeLanguage}
+      />
       <About isDarkMode={isDarkMode} />
       <Projects isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
-      <Contact isDarkMode={isDarkMode} />
-
+      <Contact isDarkMode={isDarkMode} changeLanguage={changeLanguage} />
     </div>
   );
 }
