@@ -17,7 +17,7 @@ export default function Skills({ isDarkMode }) {
         isDarkMode ? "bg-gray-900 text-gray-400" : "bg-gray-100 text-gray-900"
       }`}
     >
-      <div className="container px-5 py-10 mx-auto">
+      <div className="container px-5 py-5 mx-auto">
         <div className="text-center mb-20">
           <ChipIcon className="w-10 inline-block mb-4" />
           <h1

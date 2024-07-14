@@ -6,7 +6,7 @@ import { projects } from "../data";
 import { useTranslation } from "react-i18next";
 
 export default function ProjectDetail({ isDarkMode }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { projectId } = useParams();
   const project = projects.find(
     (p) => p.title_fr.toLowerCase().replace(/\s+/g, "-") === projectId

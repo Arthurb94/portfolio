@@ -1,10 +1,11 @@
 // src/components/About.js
 
-import developer_dark from "../assets/developer-dark.png";
+import React from "react";
 import { useTranslation } from "react-i18next";
+import developer_dark from "../assets/developer-dark.png";
 
 export default function About({ isDarkMode }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <section
       id="about"
@@ -31,20 +32,20 @@ export default function About({ isDarkMode }) {
           <p className="mb-8 leading-relaxed">{t("about.description")}</p>
           <div className="flex justify-center">
             <a
-              href="#contact"
+              href="profil"
               className="inline-flew text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
             >
-              {t("about.contactButton")}
+              {t("about.profileButton")}
             </a>
             <a
-              href="#projects"
+              href="#contact"
               className={`ml-4 inline-flex ${
                 isDarkMode
                   ? "text-gray-400 bg-gray-800 hover:bg-gray-700 hover:text-white"
                   : "text-gray-900 bg-gray-200 hover:bg-gray-300 hover:text-gray-900"
               } border-0 py-2 px-6 focus:outline-none rounded text-lg`}
             >
-              {t("about.projectButton")}
+              {t("about.contactButton")}
             </a>
           </div>
         </div>

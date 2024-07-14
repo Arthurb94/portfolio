@@ -1,10 +1,10 @@
 // src/components/Projects.js
 
-import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
 import { projects } from "../data";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { CodeIcon } from "@heroicons/react/solid";
 
 export default function Projects({ isDarkMode }) {
   const { t, i18n } = useTranslation();
@@ -30,9 +30,6 @@ export default function Projects({ isDarkMode }) {
           >
             {t("projects.title")}
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            {t("projects.description")}
-          </p>
         </div>
         <div className="flex flex-wrap -m-4">
           {projects.map((project, index) => (

@@ -1,20 +1,24 @@
 // src/components/Navbar.js
 
-import { SunIcon, MoonIcon } from "@heroicons/react/solid";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
+import { useNavigate } from "react-router-dom";
+import { SunIcon, MoonIcon } from "@heroicons/react/solid";
 
 export default function Navbar({ isDarkMode, toggleTheme, changeLanguage }) {
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate(); // 2. Get the navigate function from useNavigate
+  const navigate = useNavigate();
 
   const handleChangeLanguage = (e) => {
     changeLanguage(e.target.value);
   };
 
   const handlePortfolioClick = () => {
-    navigate("/portfolio"); // 3. Navigate to /portfolio when clicked
+    navigate("/portfolio");
+  };
+
+  const handleProfileClick = () => {
+    navigate("/profile");
   };
 
   return (
@@ -24,17 +28,23 @@ export default function Navbar({ isDarkMode, toggleTheme, changeLanguage }) {
       }`}
     >
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="title-font font-medium text-white mb-4 md:mb-0">
+        <button
+          onClick={handlePortfolioClick}
+          className={`title-font font-medium text-white mb-4 md:mb-0 ml-3 text-xl ${
+            isDarkMode ? "text-white" : "text-gray-900"
+          }`}
+        >
+          Arthur BARGAS
+        </button>
+        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center">
           <button
-            onClick={handlePortfolioClick}
-            className={`ml-3 text-xl ${
-              isDarkMode ? "text-white" : "text-gray-900"
+            onClick={handleProfileClick}
+            className={`mr-5 hover:text-white ${
+              isDarkMode ? "text-gray-400" : "text-gray-900"
             }`}
           >
-            Arthur BARGAS
+            {t("navbar.profile")}
           </button>
-        </a>
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center">
           <a
             href="#projects"
             className={`mr-5 hover:text-white ${
@@ -51,14 +61,6 @@ export default function Navbar({ isDarkMode, toggleTheme, changeLanguage }) {
           >
             {t("navbar.skills")}
           </a>
-          {/* <a
-            href="#testimonials"
-            className={`mr-5 hover:text-white ${
-              isDarkMode ? "text-gray-400" : "text-gray-900"
-            }`}
-          >
-            {t("navbar.testimonials")}
-          </a> */}
           <a
             href="#contact"
             className={`mr-5 hover:text-white ${

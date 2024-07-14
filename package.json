@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://arthurb94.github.io/portfolio",
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@heroicons/react": "^1.0.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

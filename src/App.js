@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 import ProjectDetail from "./components/ProjectDetail";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./i18n";
@@ -39,10 +39,7 @@ function App() {
                 <About isDarkMode={isDarkMode} />
                 <Projects isDarkMode={isDarkMode} />
                 <Skills isDarkMode={isDarkMode} />
-                <Contact
-                  isDarkMode={isDarkMode}
-                  changeLanguage={changeLanguage}
-                />
+                <Contact isDarkMode={isDarkMode} />
               </>
             }
           />
